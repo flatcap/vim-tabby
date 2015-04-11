@@ -40,13 +40,16 @@ nnoremap <silent> <Plug>TabbyUnexpandM :<C-U>set opfunc=<SID>tab_u<CR>g@
 nnoremap <silent> <Plug>TabbyUnexpandA :<C-U>call <SID>tab_u(1,line('$'))<CR>
 nnoremap <silent> <Plug>TabbyUnexpandL :<C-U>call <SID>tab_u(line('.'),line('.'))<CR>
 
-xmap <Leader><S-Tab> <plug>TabbyExpandV
-nmap <Leader><S-Tab> <plug>TabbyExpandM
-nmap <Leader><S-Tab> <plug>TabbyExpandL
-nmap <Leader><S-Tab> <plug>TabbyExpandA
+if get(g:, 'tabby_create_mappings', 1)
+	xmap <Leader><S-Tab> <plug>TabbyExpandV
+	nmap <Leader><S-Tab> <plug>TabbyExpandM
+	nmap <Leader><S-Tab> <plug>TabbyExpandL
+	nmap <Leader><S-Tab> <plug>TabbyExpandA
 
-xmap <Leader><Tab> <plug>TabbyUnexpandV
-nmap <Leader><Tab> <plug>TabbyUnexpandM
-nmap <Leader><Tab> <plug>TabbyUnexpandL
-nmap <Leader><Tab> <plug>TabbyUnexpandA
+	xmap <Leader><Tab> <plug>TabbyUnexpandV
+	nmap <Leader><Tab> <plug>TabbyUnexpandM
+	nmap <Leader><Tab> <plug>TabbyUnexpandL
+	nmap <Leader><Tab> <plug>TabbyUnexpandA
+endif
 
+" vim:set noet ts=8 sw=8:

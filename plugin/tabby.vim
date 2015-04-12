@@ -17,7 +17,7 @@ function! s:tab_e(...)
 		let [start, stop] = [line("'["), line("']")]
 	endif
 
-	execute start.','.stop.'!expand --tabs '.v:count1.' --initial'
+	execute start.','.stop.'!expand --tabs '.v:count1
 endfunction
 
 function! s:tab_u(...)

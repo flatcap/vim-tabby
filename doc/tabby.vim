@@ -1,7 +1,7 @@
 *tabby.txt*  Plugin for un/expanding tabs
 
 Author:  Richard Russon (flatcap) <rich@flatcap.org>
-License: Same terms as Vim itself (see |license|)
+License: GPLv3 <http://fsf.org/>
 
 This plugin is only available if 'compatible' is not set.
 

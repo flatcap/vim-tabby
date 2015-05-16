@@ -42,15 +42,15 @@ function s:set_up_mappings()
 	xnoremap <silent> <Plug>TabbyUnexpandV :<C-U>call <SID>tab_unexpand (line ('''<'), line ('''>'))<CR>
 
 	if (get (g:, 'tabby_create_mappings', 1))
-		nmap <Leader><S-Tab> <Plug>TabbyExpandL
-		nmap <Leader><S-Tab> <Plug>TabbyExpandM
-		nmap <Leader><S-Tab> <Plug>TabbyExpandA
-		xmap <Leader><S-Tab> <Plug>TabbyExpandV
+		nmap <Leader><S-Tab>      <Plug>TabbyExpandA
+		nmap <Leader><S-Tab><Tab> <Plug>TabbyExpandL
+		" nmap <Leader><S-Tab>      <Plug>TabbyExpandM
+		xmap <Leader><S-Tab>      <Plug>TabbyExpandV
 
-		nmap <Leader><Tab> <Plug>TabbyUnexpandL
-		nmap <Leader><Tab> <Plug>TabbyUnexpandM
-		nmap <Leader><Tab> <Plug>TabbyUnexpandA
-		xmap <Leader><Tab> <Plug>TabbyUnexpandV
+		nmap <Leader><Tab>        <Plug>TabbyUnexpandA
+		nmap <Leader><Tab><Tab>   <Plug>TabbyUnexpandL
+		" nmap <Leader><Tab>        <Plug>TabbyUnexpandM
+		xmap <Leader><Tab>        <Plug>TabbyUnexpandV
 	endif
 
 endfunction

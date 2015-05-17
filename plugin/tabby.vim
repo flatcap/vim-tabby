@@ -30,7 +30,7 @@ function! s:tab_unexpand (...)
 	execute l:start . ',' . l:stop . '!unexpand --tabs ' . v:count1 . ' --first-only'
 endfunction
 
-function s:set_up_mappings()
+function! s:set_up_mappings()
 	nnoremap <silent> <Plug>TabbyExpandA :<C-U>call <SID>tab_expand (1, line ('$'))<CR>
 	nnoremap <silent> <Plug>TabbyExpandL :<C-U>call <SID>tab_expand (line ('.'), line ('.'))<CR>
 	nnoremap <silent> <Plug>TabbyExpandM :<C-U>set opfunc=<SID>tab_expand<CR>g@
